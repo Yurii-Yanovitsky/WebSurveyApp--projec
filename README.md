@@ -1,6 +1,6 @@
 ﻿<h1>WebSurveyApp</h1>
 
-This is my own course project, which became the final stage in the .Net speciality.
+This is a web application that allows users to create their own surveys and share them via link for others. For each of the surveys you can view reports, which are formed after every successful passing of the survey.
 
 Technology used:</br>
 🔹C#</br>
