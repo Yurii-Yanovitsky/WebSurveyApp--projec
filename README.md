@@ -1,7 +1,7 @@
 ﻿<h1>WebSurveyApp</h1>
 
-It's my own course project, which was
-made by the finishing of .Net Developer speciality.
+This is my own course project,
+which became the final stage of the .Net speciality.
 
 Technology used:</br>
 🔹C#</br>
@@ -10,7 +10,9 @@ Technology used:</br>
 🔹HTML</br>
 🔹CSS</br>
  </br>
-<h2>Demo<h2>
-<img src=https://j.gifs.com/VA8Gw5.gif />
+<h2>Demo</h2>
+<img src="https://j.gifs.com/VA8Gw5.gif"/>
+</br>
+</br>
 
-
+Here is the link on YouTube: <a>https://www.youtube.com/watch?v=Idc-shdlM_A</a>
