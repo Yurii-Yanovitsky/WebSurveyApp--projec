@@ -1,0 +1,42 @@
+﻿@model WebSurveyApp.UserBindingModel
+
+@{ViewBag.Title = "Profile"; }
+
+<form asp-action="SaveProfile">
+    <table class="table-profile">
+        <tbody>
+            <tr>
+                <td class="col1-table-profile">
+                    <input type="hidden" asp-for="Email" />
+                    <label>Name </label>
+                </td>
+                <td>
+                    <input asp-for="Name" />
+                    <span asp-validation-for="Name"></span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col1-table-profile">
+                    <label>Emai</label>
+                </td>
+                <td>
+                    @Model.Email
+                </td>
+            </tr>
+            <tr>
+                <td class="col1-table-profile">
+                    <label>Password</label>
+                </td>
+                <td>
+                    <a asp-controller="User" asp-action="ChangePassword">Change Password</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                    <button type="submit" class="btn-color-green">Save</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>

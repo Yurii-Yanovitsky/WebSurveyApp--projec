@@ -1,0 +1,52 @@
+﻿@model List<WebSurveyApp.ReportBindingModel>;
+
+@{
+    ViewBag.Title = "Report";
+}
+
+<h2>Responses Report</h2>
+
+@{
+    var reports = Model;
+
+    for (int i = 0; i < reports.Count; i++)
+    {
+        <div class="container-report-list">
+            <form asp-action="Delete">
+                <ul>
+                    <li>
+                        <span>
+                            ID: @reports[i].Id
+                        </span>
+                    </li>
+
+                    @{var responses = reports[i].Responses;}
+
+                    @for (int j = 0; j < responses.Count; j++)
+                    {
+                        <li>
+                            <span>
+                                @responses[j].Question.Text: @responses[j].Option.Text
+                            </span>
+                        </li>
+                    }
+
+                    <li>
+                        <span>
+                            Date: @reports[i].Created.ToShortDateString()
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            Time: @reports[i].Created.ToShortTimeString()
+                        </span>
+                    </li>
+                </ul>
+                <hr />
+                <input type="hidden" name="Id" value="@reports[i].Id" />
+                <input type="hidden" name="SurveyId" value="@reports[i].SurveyId" />
+                <button class="btn-color-red" type="submit">Delete</button>
+            </form>
+        </div>
+    }
+}

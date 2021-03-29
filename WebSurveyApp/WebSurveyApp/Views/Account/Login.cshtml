@@ -1,0 +1,50 @@
+﻿@model WebSurveyApp.LoginBindingModel;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/account.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/validation.css" rel="stylesheet" />
+    <title>Log Into Survey Maker</title>
+</head>
+<body>
+    <div class="container-account">
+        <h2>Log Into Survey Maker</h2>
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                <p>
+                    <label asp-for="Email"></label><br />
+                    <input asp-for="Email" />
+                    <br />
+                    <span asp-validation-for="Email"></span>
+            </div>
+            <div>
+                <p>
+                    <label asp-for="Password"></label><br />
+                    <input asp-for="Password" />
+                    <br />
+                    <span asp-validation-for="Password"></span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <button class="btn-color-green" type="submit">Log In</button>
+                </p>
+            </div>
+        </form>
+        <div>
+            <p>
+                <a asp-action="Register">Sign up</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

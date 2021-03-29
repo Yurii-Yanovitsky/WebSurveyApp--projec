@@ -1,0 +1,90 @@
+﻿@model WebSurveyApp.SurveyBindingModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+<div class="text-decoration-a">
+    <a asp-action="title" asp-route-surveyId="@Model.Id">Change Title :</a>
+    <span class="font-weight-bold">@Model.Title</span>
+
+    <p>
+        <a asp-controller="Question" asp-action="Create" asp-route-surveyId="@Model.Id">Create New Question</a>
+    </p>
+
+    @{
+        var questions = Model.Questions;
+
+        @for (int i = 0; i < questions.Count; i++)
+        {
+            var n1 = i + 1;
+
+            var options = questions[i].Options;
+            <ul class="container-quest-list">
+                <li class="container-quest-list">
+                    <h3>@n1. @questions[i].Text</h3>
+                    <hr />
+                    <ul class="container-opt-list">
+
+                        @for (int j = 0; j < options.Count; j++)
+                        {
+                            var n2 = j + 1;
+
+                            <li class="container-opt-list">
+                                @n2. @options[j].Text
+                                <div>
+                                    <form asp-controller="Option" asp-action="Edit" method="get">
+                                        <input type="hidden" name="surveyId" value="@Model.Id" />
+                                        <input type="hidden" name="optionId" value="@options[j].Id">
+                                        <button class="btn-color-blue" type="submit">Edit</button>
+                                    </form>
+                                    |
+                                    <form asp-controller="Option" asp-action="Delete" method="post">
+                                        <input type="hidden" name="surveyId" value="@Model.Id" />
+                                        <input type="hidden" name="optionId" value="@options[j].Id">
+                                        <button class="btn-color-red" type="submit">Delete</button>
+                                    </form>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                    <p>
+                        <a asp-controller="Option" asp-action="Create" asp-route-surveyId="@Model.Id" asp-route-questionId="@questions[i].Id">add another option</a>
+                    </p>
+
+                    <hr />
+                    <div>
+                        <form asp-controller="Question" asp-action="Edit" method="get">
+                            <input type="hidden" name="questionId" value="@questions[i].Id" />
+                            <p>
+                                <button class="btn-color-blue" type="submit">Edit</button>
+                            </p>
+                        </form>
+                        <form asp-controller="Question" asp-action="Delete" method="post">
+                            <input type="hidden" name="questionId" value="@questions[i].Id" />
+                            <input type="hidden" name="surveyId" value="@questions[i].SurveyId" />
+                            <p>
+                                <button class="btn-color-red" type="submit">Delete</button>
+                            </p>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        }
+    }
+</div>
+
+<div>
+    <p>
+        <label class="font-weight-bold">Share: </label>
+        <cite>https://@Context.Request.Host.Value/@Model.Id</cite>
+    </p>
+</div>
+
+<div>
+    <p>
+        Last changes<br />
+        Date: @Model.Date<br />
+        Time: @Model.Time<br />
+    </p>
+</div>

@@ -1,0 +1,29 @@
+﻿@model WebSurveyApp.SurveyBindingModel
+
+@{
+    ViewBag.Title = "Title";
+}
+
+<div class="container-div">
+    <h2>Title</h2>
+    <hr />
+    <form asp-action="Title" method="Post">
+        <div>
+            <p>
+                <input type="hidden" name="id" value="@Model.Id" />
+                <input type="hidden" name="userId" value="@Model.UserId" />
+                <input asp-for="Title" placeholder="Type your Survey Title" />
+                <br />
+                <span asp-validation-for="Title"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <button class="btn-color-green" type="submit">Save</button>
+            </p>
+        </div>
+    </form>
+    <p>
+        <a asp-controller="Survey" asp-action="Edit" asp-route-surveyId="@Model.Id">Back to Editing</a>
+    </p>
+</div>

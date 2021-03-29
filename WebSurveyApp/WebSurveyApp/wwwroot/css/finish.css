@@ -1,0 +1,13 @@
+﻿.container {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2vw;
+}
+
+img {
+    width: 15vw;
+}

@@ -1,0 +1,46 @@
+﻿ul.container-quest-list {
+    padding: 0;
+    list-style: none;
+}
+
+    ul.container-quest-list li {
+        width: 400px;
+        border: 1px groove;
+        background-color: lightblue;
+    }
+
+    ul.container-quest-list div {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    ul.container-quest-list form {
+        display: inline-block;
+    }
+
+    ul.container-quest-list li h3 {
+        padding-left: 10px
+    }
+
+    ul.container-quest-list li a {
+        padding-left: 10px;
+        color: darkblue;
+    }
+
+
+ul.container-opt-list {
+    padding: 0;
+    list-style: none;
+}
+
+    ul.container-opt-list li {
+        width: auto;
+        border: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+div.text-decoration-a a {
+    text-decoration: none;
+}

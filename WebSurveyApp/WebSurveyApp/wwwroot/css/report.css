@@ -1,0 +1,21 @@
+﻿div.container-report-list {
+    width: 300px;
+    background-color: lightblue;
+    border: 1px groove;
+    margin-top: 30px;
+}
+
+    div.container-report-list ul {
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+        div.container-report-list ul li {
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding: 10px 20px;
+        }
+
+    div.container-report-list button {
+        margin: 10px 10px;
+    }

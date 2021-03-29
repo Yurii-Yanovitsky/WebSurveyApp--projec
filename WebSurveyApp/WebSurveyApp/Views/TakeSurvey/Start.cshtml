@@ -1,0 +1,54 @@
+﻿@model WebSurveyApp.SurveyBindingModel;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/start.css" rel="stylesheet" />
+    <title>All Question</title>
+</head>
+<body>
+    <header>
+        <h2>@Model.Title</h2>
+    </header>
+    <hr />
+    <div class="container">
+        <form asp-controller="TakeSurvey" asp-action="Finish" method="post">
+
+            <input type="hidden" name="model.SurveyId" value="@Model.Id" />
+            @{
+                var questions = Model.Questions;
+
+                @for (int i = 0; i < questions.Count; i++)
+                {
+                    <h4>@questions[i].Text</h4>
+
+                    <input type="hidden" name="model.Responses[@i].QuestionId" value="@questions[i].Id" />
+
+                    var options = questions[i].Options;
+
+                    <ul class="container-start-list">
+                        @for (int j = 0; j < options.Count; j++)
+                        {
+                            <li>
+                                <span>
+                                    <input type="radio" name="model.Responses[@i].OptionId" value="@options[j].Id" /> @options[j].Text
+                                </span>
+                            </li>
+                        }
+                    </ul>
+                }
+            }
+            <p>
+                <button class="btn-color-green" type="submit">Send</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

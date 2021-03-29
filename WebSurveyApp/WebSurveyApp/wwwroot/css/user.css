@@ -1,0 +1,16 @@
+﻿table.table-profile {
+    background-color: lightblue;
+    border: 1px groove;
+    border-spacing: 10px 0px;
+    text-decoration: none;
+    padding: 10px 0px;
+}
+
+    table.table-profile td {
+        width: 100px;
+        padding: 10px;
+    }
+
+        table.table-profile td input {
+            margin: 0px;
+        }

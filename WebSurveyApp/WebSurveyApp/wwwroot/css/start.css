@@ -1,0 +1,22 @@
+﻿ul.container-start-list {
+    list-style-type: none;
+    width: 300px;
+    border: 1px groove;
+    padding-left: 0px;
+}
+
+    ul.container-start-list li {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    ul.container-start-list span {
+        width: auto;
+        display: block;
+        padding: 10px 5px;
+        background-color: lightblue;
+    }
+
+    ul.container-start-list button {
+        margin: 5px 10px;
+    }
