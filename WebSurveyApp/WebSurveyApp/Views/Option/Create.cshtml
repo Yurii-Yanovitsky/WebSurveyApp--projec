@@ -1,0 +1,31 @@
+﻿@model WebSurveyApp.OptionBindingModel;
+
+@{
+    ViewBag.Title = "Create Option";
+}
+
+<div class="container-div">
+    <h2>Create Option</h2>
+    <hr />
+    <form asp-action="Create" method="Post">
+        <div>
+            <p>
+                <input type="hidden" name="SurveyId" value="@ViewBag.SurveyId" />
+                <input type="hidden" asp-for="QuestionId" />
+                <input asp-for="Text" placeholder="New Answer" />
+                <span asp-validation-for="Text"></span>
+            </p>
+            <p>
+                <span asp-validation-for="Text"></span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <button class="btn-color-green" type="submit" id="submit">Create</button>
+            </p>
+        </div>
+    </form>
+    <p>
+        <a asp-controller="Survey" asp-action="Edit" asp-route-surveyId="@ViewBag.SurveyId">Back to Editing</a>
+    </p>
+</div>

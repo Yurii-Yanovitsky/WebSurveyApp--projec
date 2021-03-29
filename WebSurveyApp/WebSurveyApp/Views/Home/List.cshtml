@@ -1,0 +1,60 @@
+﻿@model List<WebSurveyApp.SurveyBindingModel>
+
+@{
+    ViewBag.Title = "Home";
+    Layout = "_Layout";
+}
+
+@{
+    var surveys = Model;
+
+    <div class="container-table-home">
+        <table class="table-home">
+            <thead>
+                <tr>
+                    <td class="col1-table-home">
+                        Title
+                    </td>
+                    <td>
+                        Modified
+                    </td>
+                    <td>
+                        Responses
+                    </td>
+                    <td>
+                        Rsults
+                    </td>
+                    <td>
+                        Actions
+                    </td>
+                </tr>
+            </thead>
+            @foreach (var survey in surveys)
+            {
+                <tbody>
+                    <tr>
+                        <td class="col1-table-home">
+                            <a asp-controller="Survey" asp-action="Edit" asp-route-surveyId="@survey.Id">@survey.Title</a>
+                        </td>
+                        <td>
+                            @survey.Modified.ToShortDateString()
+                        </td>
+                        <td>
+                            @survey.Reports.Count
+                        </td>
+                        <td>
+                            <a asp-controller="Report" asp-action="List" asp-route-surveyId="@survey.Id">Reports</a>
+                        </td>
+                        <td>
+                            <form asp-controller="Survey" asp-action="Delete" asp-route-surveyId="@survey.Id" method="post">
+                                <span>
+                                    <button class="btn-color-red" type="submit">Delete</button>
+                                </span>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+    </div>
+}

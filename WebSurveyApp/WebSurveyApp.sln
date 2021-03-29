@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSurveyApp", "WebSurveyApp\WebSurveyApp.csproj", "{97FB2EB8-2EB4-4196-B8CB-7544CC3FCAC9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4B3E753E-27A6-4999-BB66-E38A7D95BC05} = {4B3E753E-27A6-4999-BB66-E38A7D95BC05}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebLogic", "WebLogic\WebLogic.csproj", "{4B3E753E-27A6-4999-BB66-E38A7D95BC05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{56E11697-765D-453D-B62C-60A5EF007719}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97FB2EB8-2EB4-4196-B8CB-7544CC3FCAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97FB2EB8-2EB4-4196-B8CB-7544CC3FCAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97FB2EB8-2EB4-4196-B8CB-7544CC3FCAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97FB2EB8-2EB4-4196-B8CB-7544CC3FCAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B3E753E-27A6-4999-BB66-E38A7D95BC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3E753E-27A6-4999-BB66-E38A7D95BC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3E753E-27A6-4999-BB66-E38A7D95BC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B3E753E-27A6-4999-BB66-E38A7D95BC05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D577D69C-78D9-41D3-B197-AED0B951DA7E}
+	EndGlobalSection
+EndGlobal

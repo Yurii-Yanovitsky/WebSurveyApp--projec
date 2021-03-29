@@ -1,0 +1,30 @@
+﻿table.table-home {
+    border-spacing: 0px 1px;
+    background-color: lightblue;
+}
+
+    table.table-home thead {
+        color: blue;
+    }
+
+    table.table-home td {
+        width: 10%;
+        margin: 0;
+        padding: 10px 20px;
+        text-align: center;
+        border-top: 1px groove;
+        border-bottom: 1px groove;
+    }
+
+        table.table-home td a {
+            color: darkblue;
+        }
+
+.col1-table-home {
+    text-align: left !important;
+}
+
+div.container-table-home {
+    width: 800px;
+    border: 1px groove;
+}

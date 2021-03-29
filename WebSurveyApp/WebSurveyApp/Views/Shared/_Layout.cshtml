@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" charset="utf-8" content="width=device-width" />
+    <link type="text/css" href="~/css/main.css" rel="stylesheet" />
+    <link type="text/css" href="~/css/home.css" rel="stylesheet" />
+    <link type="text/css" href="~/css/survey.css" rel="stylesheet" />
+    <link type="text/css" href="~/css/user.css" rel="stylesheet" />
+    <link type="text/css" href="~/css/report.css" rel="stylesheet" />
+    <link type="text/css" href="~/css/validation.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li>
+                <a asp-controller="Home" asp-action="List">Home</a>
+            </li>
+            <li>
+                <a asp-controller="Survey" asp-action="Create">New Survey</a>
+            </li>
+            <li>
+                <a asp-controller="User" asp-action="Profile">Account</a>
+            </li>
+            <li>
+                <a asp-controller="Account" asp-action="SignOut">SignOut</a>
+            </li>
+        </ul>
+    </header>
+    <hr />
+    <div class="container">
+        @RenderBody()
+    </div>
+</body>
+</html>
