@@ -10,8 +10,8 @@ Technology used:</br>
 🔹CSS</br>
  </br>
 <h2>Demo</h2>
-<img src="https://j.gifs.com/VA8Gw5.gif"/>
+<img src="Gif/survey.gif"/>
 </br>
 </br>
 
-Here is the link on YouTube: <a>https://www.youtube.com/watch?v=Idc-shdlM_A</a>
+Here is the link on YouTube: <a>https://www.youtube.com/watch?v=VNy__qJ83to</a>
