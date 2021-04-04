@@ -1,30 +1,34 @@
-﻿table.table-home {
-    border-spacing: 0px 1px;
-    background-color: lightblue;
+﻿div.container-table-home {
+    max-width: 50vw;
+    border: 2px solid gray;
 }
 
-    table.table-home thead {
-        color: blue;
+    div.container-table-home table {
+        border-spacing: 0px;
+        background-color: lightblue;
+        background-clip: border-box;
     }
 
-    table.table-home td {
-        width: 10%;
-        margin: 0;
-        padding: 10px 20px;
-        text-align: center;
-        border-top: 1px groove;
-        border-bottom: 1px groove;
-    }
-
-        table.table-home td a {
-            color: darkblue;
+        div.container-table-home table thead {
+            color: navy;
         }
 
-.col1-table-home {
-    text-align: left !important;
-}
+        div.container-table-home table td, th {
+            width: 10vw;
+            margin: 0;
+            padding: 1vh 2vw;
+            text-align: center;
+            border-top: 1px groove;
+        }
 
-div.container-table-home {
-    width: 800px;
-    border: 1px groove;
-}
+        div.container-table-home table th {
+            border-top: none;
+        }
+
+    div.container-table-home tr td:first-of-type {
+        text-align: left !important;
+    }
+
+    div.container-table-home tr th:first-of-type {
+        text-align: left !important;
+    }

@@ -1,7 +1,14 @@
-﻿.container {
+﻿body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    padding-top: 3vh;
     text-align: center;
-    width: 50%;
     margin: 0 auto;
+    background-color: lightblue;
 }
 
 h1 {

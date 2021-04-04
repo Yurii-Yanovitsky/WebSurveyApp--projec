@@ -1,8 +1,6 @@
 ﻿@model WebSurveyApp.LoginBindingModel;
 
-@{
-    Layout = null;
-}
+@{ Layout = null; }
 
 <!DOCTYPE html>
 
@@ -37,14 +35,10 @@
             <div>
                 <p>
                     <button class="btn-color-green" type="submit">Log In</button>
+                    <a asp-action="Register">Sign up</a>
                 </p>
             </div>
         </form>
-        <div>
-            <p>
-                <a asp-action="Register">Sign up</a>
-            </p>
-        </div>
     </div>
 </body>
 </html>
