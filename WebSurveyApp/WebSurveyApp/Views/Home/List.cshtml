@@ -9,31 +9,31 @@
     var surveys = Model;
 
     <div class="container-table-home">
-        <table class="table-home">
+        <table>
             <thead>
                 <tr>
-                    <td class="col1-table-home">
+                    <th>
                         Title
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Modified
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Responses
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Rsults
-                    </td>
-                    <td>
+                    </th>
+                    <th>
                         Actions
-                    </td>
+                    </th>
                 </tr>
             </thead>
             @foreach (var survey in surveys)
             {
                 <tbody>
                     <tr>
-                        <td class="col1-table-home">
+                        <td>
                             <a asp-controller="Survey" asp-action="Edit" asp-route-surveyId="@survey.Id">@survey.Title</a>
                         </td>
                         <td>

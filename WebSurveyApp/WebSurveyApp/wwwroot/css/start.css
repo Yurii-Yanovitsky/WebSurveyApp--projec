@@ -1,22 +1,67 @@
-﻿ul.container-start-list {
+﻿header {
+    width: 100vw;
+    margin: 0px;
+    padding-left: 5vw;
+    padding-top: 0.7vh;
+    padding-bottom: 0.7vh;
+    border-bottom: 0.2vw solid gray;
+    background-color: rebeccapurple;
+    background-clip: border-box;
+}
+
+div.container-start {
     list-style-type: none;
-    width: 300px;
-    border: 1px groove;
+    width: 30vw;
     padding-left: 0px;
 }
 
-    ul.container-start-list li {
-        margin-top: 2px;
-        margin-bottom: 2px;
+
+    div.container-start li:last-child {
+        border-bottom: none;
     }
 
-    ul.container-start-list span {
-        width: auto;
-        display: block;
-        padding: 10px 5px;
-        background-color: lightblue;
-    }
 
-    ul.container-start-list button {
-        margin: 5px 10px;
-    }
+div.form_radio_btn {
+    margin-bottom: 2%;
+}
+
+.form_radio_btn input[type=radio] {
+    display: none;
+}
+
+.form_radio_btn label {
+    display: inline-block;
+    padding: 1.5vh 1.5vw 1.5vh 0.7vw;
+    border: 0.1vw solid #999;
+    border-radius: 0.4vw;
+    user-select: none;
+    background-color: lightcyan;
+}
+
+.form_radio_btn input[type=radio]:checked + label {
+    background: #ffe0a6;
+}
+
+.form_radio_btn label:hover {
+    color: #666;
+}
+
+.form_radio_btn input[type=radio]:disabled + label {
+    background: #efefef;
+    color: #666;
+}
+
+
+.form_radio_btn input[type=radio]:checked + label::before {
+    background: #ffe0a6;
+    content: url(../img/radior2.svg);
+    width: 1vw;
+    margin-right: 0.7vw;
+}
+
+.form_radio_btn label::before {
+    content: url(../img/radior1.svg);
+    display: inline-block;
+    width: 1vw;
+    margin-right: 0.7vw;
+}
