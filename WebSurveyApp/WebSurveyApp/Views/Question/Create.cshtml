@@ -4,9 +4,8 @@
     ViewBag.Title = "Create Question";
 }
 
-<div class="container-div">
+<div class="container-edit">
     <h2>Create Question</h2>
-    <hr />
     <form asp-action="Create" method="Post">
         <div>
             <p>
@@ -22,7 +21,6 @@
                 <button class="btn-color-green" type="submit" id="submit">Create</button>
             </p>
         </div>
-
     </form>
     <p>
         <a asp-controller="Survey" asp-action="Edit" asp-route-surveyId="@Model.SurveyId">Back to Editing</a>

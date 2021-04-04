@@ -1,8 +1,33 @@
-﻿.container-account {
-    margin-left: 50px;
-    padding-top: 10px;
+﻿body {
+    background-color: lightblue;
 }
 
+.container-account {
+    width: 100vw;
+    margin-left: 5vw;
+    padding-top: 1vh;
+    font-size: 0.9vw;
+}
+
+    .container-account p {
+        margin: 1.2vh 0;
+    }
+
     .container-account input {
-        margin: 7px 0px;
+        margin: 0.5vw 0px;
+        font-size: 0.9vw;
+    }
+
+    .container-account a {
+        text-decoration: none;
+        padding: 0.7vh 0.7vw;
+        border: 0.2vw solid #413e3e;
+        border-radius: 4vh;
+        color: gray;
+        background-color: white;
+        font-size: 0.9vw;
+    }
+
+    .container-account form + p {
+        margin: 2vh 0;
     }
