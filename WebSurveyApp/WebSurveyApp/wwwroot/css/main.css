@@ -1,91 +1,130 @@
-﻿header {
-    background-color: aliceblue;
-    padding-left: 50px;
-}
-
-footer {
-    background-color: honeydew;
-    padding: 20px;
-    margin: 10px;
-}
-
-#main {
-    padding: 20px;
-    margin: 10px;
-}
-
-body {
-    font-size: 13px;
+﻿body {
     font-family: Verdana, Arial, Helvetica, Sans-Serif;
-    background-color: #f7f7fa;
+    margin: 0px;
 }
 
-.menu {
-    padding-left: 0px;
+header.menu {
+    width: 100vw;
+    margin: 0px;
+    padding-left: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border-bottom: 0.2vw solid gray;
+    background-color: rebeccapurple;
+    background-clip: border-box;
 }
 
-    .menu ul {
-        list-style: none;
-    }
+.menu ul {
+    width: 40vw;
+    margin: 0px;
+    padding-left: 1vw;
+    list-style: none;
+}
 
-    .menu li {
-        display: inline;
-    }
+.menu li {
+    display: inline;
+}
 
-    .menu a {
-        text-decoration: none;
-        display: inline-block;
-        padding: 10px 20px;
-        color: darkviolet;
-        background-color: lightgray;
+.menu a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 1vh 2vw;
+    color: darkviolet;
+    background-color: lightgray;
+    font-size: 0.9vw;
+}
+
+
+    .menu a:hover {
+        color: #ad0d9e;
     }
 
 .container {
-    margin-left: 50px;
-    padding-top: 10px;
+    width: 100vw;
+    min-height: 100vh;
+    padding-left: 6vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: lightskyblue;
+    background-clip: border-box;
+    font-size: 0.9vw;
 }
 
     .container input {
-        margin: 5px 0px;
+        font-size: 100%;
     }
 
 
-div.container-div {
-    width: 350px;
-    border: 1px groove;
+    .container > h2 {
+        padding-left: 0.5vw;
+    }
+
+a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+    a:hover {
+        color: #382cec
+    }
+
+div.container-edit {
+    width: 30vw;
+    border: 0.1vw groove;
     background-color: lightblue;
 }
 
-    div.container-div h2 {
-        padding-left: 10px
+    div.container-edit h2 {
+        margin: 0px;
+        padding-left: 1vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        border-bottom: 0.1vw solid gray;
     }
 
-    div.container-div p {
-        padding-left: 10px
+    div.container-edit p {
+        padding-left: 1vw;
+        margin: 2vh 0px;
+    }
+
+    div.container-edit input {
+        margin: 0.5vw 0px;
     }
 
 
 .btn-color-red {
-    border-radius: 5px;
     background-color: red;
-    color: lightgray;
-    padding: 5px 5px;
 }
+
+    .btn-color-red:hover {
+        background-color: #cb3434;
+        color: #ffe8e8;
+    }
 
 .btn-color-blue {
-    border-radius: 5px;
     background-color: blue;
-    color: lightgray;
-    padding: 5px 5px;
 }
+
+    .btn-color-blue:hover {
+        background-color: #3027fe;
+        color: #ffe8e8;
+    }
 
 .btn-color-green {
-    border-radius: 5px;
     background-color: green;
-    color: lightgray;
-    padding: 5px 5px;
 }
 
+    .btn-color-green:hover {
+        background-color: #009305;
+    }
+
+.btn-color-red, .btn-color-blue, .btn-color-green {
+    border-radius: 4vh;
+    color: lightgray;
+    padding: 0.7vh 0.7vw;
+    border: 0.2vw solid #413e3e;
+    font-size: 0.9vw;
+}
 
 .font-weight-bold {
     font-weight: bold;

@@ -12,8 +12,8 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <header>
-        <ul class="menu">
+    <header class="menu">
+        <ul>
             <li>
                 <a asp-controller="Home" asp-action="List">Home</a>
             </li>
@@ -28,7 +28,6 @@
             </li>
         </ul>
     </header>
-    <hr />
     <div class="container">
         @RenderBody()
     </div>
