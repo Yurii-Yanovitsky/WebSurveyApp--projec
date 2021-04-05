@@ -1,7 +1,8 @@
 ﻿div.container-report-list {
     width: 35vh;
     background-color: lightblue;
-    border: 0.1vw groove;
+    border: 0.1vw solid gray;
+    border-radius: 3vh;
     margin-top: 3vh;
 }
 
@@ -11,15 +12,29 @@
 
     div.container-report-list ul {
         list-style-type: none;
-        padding-left: 0px;
+        margin: 0;
+        padding-left: 0;
     }
 
         div.container-report-list ul li {
-            margin-top: 0.2vh;
-            margin-bottom: 0.2vh;
+            margin: 0;
             padding: 1vh 2vh;
         }
 
+    div.container-report-list form ul li:first-of-type {
+        background-color: lightgray;
+        border-radius: 3vh 3vh 0 0;
+    }
+
+    div.container-report-list form ul li:nth-child(1n+2) {
+        background-color: lightcyan;
+    }
+
     div.container-report-list button {
-        margin: 1vh 1vw;
+        margin-left: 1vw;
+    }
+
+
+    div.container-report-list ul + p {
+        margin: 0.7vh 0;
     }

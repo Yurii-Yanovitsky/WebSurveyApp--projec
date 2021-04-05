@@ -1,0 +1,22 @@
+﻿body {
+    background-color: lightskyblue;
+}
+
+.container.container-success p {
+    margin-top: 5vh;
+}
+
+.container.container-success a {
+    text-decoration: none;
+    margin-left: 1vw;
+    padding: 0.63vh 0.7vw;
+    border: 0.2vw solid #413e3e;
+    border-radius: 4vh;
+    color: gray;
+    background-color: white;
+    font-size: 0.9vw;
+}
+
+    .container.container-success a:hover {
+        color: blue;
+    }
