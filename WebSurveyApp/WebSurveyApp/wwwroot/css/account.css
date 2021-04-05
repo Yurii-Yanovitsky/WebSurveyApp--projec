@@ -1,5 +1,5 @@
 ﻿body {
-    background-color: lightblue;
+    background-color: lightskyblue;
 }
 
 .container-account {
@@ -20,7 +20,8 @@
 
     .container-account a {
         text-decoration: none;
-        padding: 0.7vh 0.7vw;
+        margin-left: 1vw;
+        padding: 0.63vh 0.7vw;
         border: 0.2vw solid #413e3e;
         border-radius: 4vh;
         color: gray;
@@ -28,6 +29,11 @@
         font-size: 0.9vw;
     }
 
-    .container-account form + p {
-        margin: 2vh 0;
-    }
+
+        .container-account a:hover {
+            color: blue;
+        }
+
+form p:last-of-type {
+    margin: 3vh 0;
+}
