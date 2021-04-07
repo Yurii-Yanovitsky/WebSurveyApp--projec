@@ -1,9 +1,10 @@
 ﻿div.container-report-list {
-    width: 35vh;
+    width: 18vw;
     background-color: lightblue;
     border: 0.1vw solid gray;
     border-radius: 3vh;
     margin-top: 3vh;
+    font-size: 0.8vw;
 }
 
     div.container-report-list h2 {
@@ -13,13 +14,24 @@
     div.container-report-list ul {
         list-style-type: none;
         margin: 0;
-        padding-left: 0;
+        padding: 0;
     }
 
         div.container-report-list ul li {
-            margin: 0;
-            padding: 1vh 2vh;
+            padding: 4% 7%;
         }
+
+            div.container-report-list ul li p {
+                max-width: 100%;
+                word-break: break-word;
+                margin: 0;
+            }
+
+            div.container-report-list ul li span {
+                margin: 0;
+                padding: 0;
+                font-weight: bold;
+            }
 
     div.container-report-list form ul li:first-of-type {
         background-color: lightgray;
@@ -30,11 +42,7 @@
         background-color: lightcyan;
     }
 
-    div.container-report-list button {
-        margin-left: 1vw;
-    }
-
-
-    div.container-report-list ul + p {
-        margin: 0.7vh 0;
+    div.container-report-list form ul li:last-child {
+        background-color: lightgray;
+        border-radius: 0 0 3vh 3vh;
     }

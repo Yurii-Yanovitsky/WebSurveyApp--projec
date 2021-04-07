@@ -1,18 +1,17 @@
 ﻿
 ul.container-quest-list {
+    width: 24%;
     padding: 0;
     list-style: none;
 }
 
-    ul.container-quest-list li {
-        width: 30vw;
+    ul.container-quest-list > li {
+        max-width: 25vw;
+        min-width: 10vw;
         border: 1px groove;
+        margin-top: 1vh;
+        border-radius: 1vw;
         background-color: lightblue;
-    }
-
-    ul.container-quest-list div {
-        display: inline-block;
-        margin-left: 1vw;
     }
 
     ul.container-quest-list form {
@@ -20,23 +19,48 @@ ul.container-quest-list {
     }
 
     ul.container-quest-list li h3 {
-        padding-left: 1vw
+        margin: 0 0 1vh 0;
+        padding: 1vw;
+        border-bottom: 0.1vw solid gray;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
 
-    ul.container-quest-list li a {
-        padding-left: 1vw;
+    ul.container-quest-list ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        ul.container-quest-list ul li {
+            width: auto;
+            margin: 7% 0;
+            padding-left: 1vw;
+            overflow: hidden;
+        }
+
+    ul.container-quest-list > li > ul > li > p {
+        width: 42%;
+        margin: 3% 0 0 4%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        float: left;
+    }
+
+    ul.container-quest-list li ul li div {
+        max-width: 45%;
+        float: left;
+        position: relative;
+        left: 8%;
     }
 
 
-ul.container-opt-list {
-    padding: 0;
-    list-style: none;
-}
+    ul.container-quest-list ul li:last-child {
+        border-top: 0.1vh solid gray;
+        margin: 0;
+    }
 
-    ul.container-opt-list li {
-        width: auto;
-        border: none;
-        margin-top: 0.5vh;
-        margin-bottom: 0.5vh;
-        padding-left: 1vw;
+    ul.container-quest-list a {
+        padding: 1%;
     }

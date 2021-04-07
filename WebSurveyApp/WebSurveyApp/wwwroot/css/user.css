@@ -2,6 +2,7 @@
     background-color: lightblue;
     border: 0.1vw groove;
     border-spacing: 1vw 0px;
+    border-radius: 1vw;
     text-decoration: none;
     padding: 1vh 0px;
 }

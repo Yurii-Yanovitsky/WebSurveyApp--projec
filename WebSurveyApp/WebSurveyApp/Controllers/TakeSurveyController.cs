@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebLogic.Services;
 
@@ -32,7 +33,7 @@ namespace WebSurveyApp.Controllers
         [HttpPost]
         public async Task<IActionResult> Finish(ReportBindingModel model)
         {
-            if (ModelState.IsValid)
+            if (model.Responses.All(rsp => rsp.OptionId != 0))
             {
                 var reportModel = model.ToServiceModel();
                 await _reportService.AddReportAsync(reportModel);
@@ -40,9 +41,12 @@ namespace WebSurveyApp.Controllers
                 return View();
             }
 
+            var surveyModel = await _surveyService.GetSurveyById(model.SurveyId);
+            var viewModel = surveyModel.ToViewModel();
+
             ModelState.AddModelError("", "It seems like you haven't answerd all the questions");
 
-            return NotFound();
+            return View("Start", viewModel);
         }
     }
 }

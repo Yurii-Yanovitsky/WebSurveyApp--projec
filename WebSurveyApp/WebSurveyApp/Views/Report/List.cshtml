@@ -21,25 +21,19 @@
             @for (int j = 0; j < responses.Count; j++)
             {
             <li>
-                <span>
-                    @responses[j].Question.Text: @responses[j].Option.Text
-                 </span>
+                <p><span>@responses[j].Question.Text:</span> @responses[j].Option.Text</p>
             </li>}
             <li>
-                <span>
-                    Date: @reports[i].Created.ToShortDateString()
-                </span>
+                Date: @reports[i].Created.ToShortDateString()
             </li>
             <li>
-                <span>
-                    Time: @reports[i].Created.ToShortTimeString()
-                </span>
+                Time: @reports[i].Created.ToShortTimeString()
+            </li>
+            <li>
+                <input type="hidden" name="Id" value="@reports[i].Id" />
+                <input type="hidden" name="SurveyId" value="@reports[i].SurveyId" />
+                <button class="btn-color-red" type="submit">Delete</button>
             </li>
         </ul>
-        <p>
-            <input type="hidden" name="Id" value="@reports[i].Id" />
-            <input type="hidden" name="SurveyId" value="@reports[i].SurveyId" />
-            <button class="btn-color-red" type="submit">Delete</button>
-        </p>
     </form>
 </div>}

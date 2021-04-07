@@ -2,33 +2,33 @@
 
 @{ ViewBag.Title = Model.Title; }
 
-<div>
-    <a asp-action="title" asp-route-surveyId="@Model.Id">Change Title :</a>
-    <span class="font-weight-bold">@Model.Title</span>
+<a asp-action="title" asp-route-surveyId="@Model.Id">Change Title :</a>
+<span class="font-weight-bold">@Model.Title</span>
 
-    <p>
-        <a asp-controller="Question" asp-action="Create" asp-route-surveyId="@Model.Id">Create New Question</a>
-    </p>
+<p>
+    <a asp-controller="Question" asp-action="Create" asp-route-surveyId="@Model.Id">Create New Question</a>
+</p>
 
-    @{ var questions = Model.Questions; }
+@{ var questions = Model.Questions; }
+
+<ul class="container-quest-list">
 
     @for (int i = 0; i < questions.Count; i++)
     {
-        var n1 = i + 1;
+        var number1 = i + 1;
 
         var options = questions[i].Options;
-<ul class="container-quest-list">
-    <li>
-        <h3>@n1. @questions[i].Text</h3>
-        <hr />
-        <ul class="container-opt-list">
-
-            @for (int j = 0; j < options.Count; j++)
-            {
-                var n2 = j + 1;
+<li>
+    <h3>@number1. @questions[i].Text</h3>
+    <ul>
+        @for (int j = 0; j < options.Count; j++)
+        {
+            var number2 = j + 1;
 
 <li>
-    @n2. @options[j].Text
+    <p>
+        @number2. @options[j].Text
+    </p>
     <div>
         <form asp-controller="Option" asp-action="Edit" method="get">
             <input type="hidden" name="surveyId" value="@Model.Id" />
@@ -43,13 +43,12 @@
         </form>
     </div>
 </li>}
-        </ul>
-        <p>
-            <a asp-controller="Option" asp-action="Create" asp-route-surveyId="@Model.Id" asp-route-questionId="@questions[i].Id">add another option</a>
-        </p>
-
-        <hr />
-        <div>
+        <li>
+            <p>
+                <a asp-controller="Option" asp-action="Create" asp-route-surveyId="@Model.Id" asp-route-questionId="@questions[i].Id">add another option</a>
+            </p>
+        </li>
+        <li>
             <form asp-controller="Question" asp-action="Edit" method="get">
                 <input type="hidden" name="questionId" value="@questions[i].Id" />
                 <p>
@@ -63,16 +62,16 @@
                     <button class="btn-color-red" type="submit">Delete</button>
                 </p>
             </form>
-        </div>
-    </li>
-</ul>}
-    <p>
-        <label class="font-weight-bold">Share: </label>
-        <cite>https://@Context.Request.Host.Value/@Model.Id</cite>
-    </p>
-    <p>
-        Last changes<br />
-        Date: @Model.Date<br />
-        Time: @Model.Time<br />
-    </p>
-</div>
+        </li>
+    </ul>
+</li>}
+</ul>
+<p>
+    <label class="font-weight-bold">Share: </label>
+    <cite>https://@Context.Request.Host.Value/@Model.Id</cite>
+</p>
+<p>
+    Last changes<br />
+    Date: @Model.Date<br />
+    Time: @Model.Time<br />
+</p>

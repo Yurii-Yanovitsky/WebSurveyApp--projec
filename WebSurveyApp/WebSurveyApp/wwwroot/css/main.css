@@ -3,7 +3,7 @@
     margin: 0px;
 }
 
-header.menu {
+header {
     width: 100vw;
     margin: 0px;
     padding-left: 5vw;
@@ -14,30 +14,33 @@ header.menu {
     background-clip: border-box;
 }
 
-.menu ul {
-    width: 40vw;
-    margin: 0px;
-    padding-left: 1vw;
-    list-style: none;
-}
-
-.menu li {
-    display: inline;
-}
-
-.menu a {
-    text-decoration: none;
-    display: inline-block;
-    padding: 1vh 2vw;
-    color: darkviolet;
-    background-color: lightgray;
-    font-size: 0.9vw;
-}
-
-
-    .menu a:hover {
-        color: #ad0d9e;
+    header ul {
+        max-width: 31%;
+        margin: 0 0 0 1vw;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
     }
+
+    header li {
+        float: left;
+    }
+
+    header a {
+        text-decoration: none;
+        display: block;
+        padding: 0.6em 2em;
+        color: darkviolet;
+        background-color: lightgray;
+        border: 1px solid black;
+        font-size: 0.9vw;
+    }
+
+
+        header a:hover {
+            color: #ad0d9e;
+            background-color: white;
+        }
 
 .container {
     width: 100vw;
@@ -69,8 +72,9 @@ a {
     }
 
 div.container-edit {
-    width: 30vw;
+    width: 20vw;
     border: 0.1vw groove;
+    border-radius: 1vw;
     background-color: lightblue;
 }
 
