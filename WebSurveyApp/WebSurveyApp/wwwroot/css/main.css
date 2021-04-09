@@ -71,6 +71,7 @@ a {
         color: #382cec
     }
 
+
 div.container-edit {
     width: 20vw;
     border: 0.1vw groove;
@@ -120,6 +121,7 @@ div.container-edit {
 
     .btn-color-green:hover {
         background-color: #009305;
+        color: #ffe8e8;
     }
 
 .btn-color-red, .btn-color-blue, .btn-color-green {
@@ -128,6 +130,7 @@ div.container-edit {
     padding: 0.7vh 0.7vw;
     border: 0.2vw solid #413e3e;
     font-size: 0.9vw;
+    outline: none;
 }
 
 .font-weight-bold {
